@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Example of tabs</title>
+
+</head>
+<body>
+<h1> Here is the example of accessible tab</h1>
+<div>
+<div role="tablist" aria-label="tipes of OS">
+<button role="tab" aria-selected="true" id="win" aria-controls="win_tab">
+windows   
+</button>
+<button role="tab" aria-selected="false" tabindex="-1" id="ln" aria-controls="ln_tab">
+linix
+</button>
+<button role="tab" aria-selected="false" tabindex="-1" id="IOS" aria-controls="IOS_tab">
+AppleOS
+</button>
+</div>
+<div tabindex="0" role="tabpanel" id="win_tab">
+<p>Microsoft Windows, also called Windows and Windows OS, computer operating system (OS) developed by Microsoft Corporation to run personal computers (PCs). Featuring the first graphical user interface (GUI) 
+</p>
+
+</div>
+
+<div tabindex="0" role="tabpanel" id="ln_tab" hidden>
+<p>  Linux® is an open source operating system (OS). An operating system is the software that directly manages a system's hardware and resources, like CPU, memory, and storage. The OS sits between applications and hardware and makes the connections between all of your software and the physical resources that do the work.27 </p>
+</div>
+
+<div tabindex="0" role="tabpanel" id="IOS_tab" hidden>
+<p>iOS (formerly iPhone OS) is a mobile operating system created and developed by Apple Inc. exclusively for its hardware. ... It is the world's second-most widely installed mobile operating system, after Android. It is the basis for three other operating systems made by Apple: iPadOS, tvOS, and watchOS.</p>
+</div>
+<script type="text/javascript" src="tab.js"></script>
+</div>
+
+
+</body>
+</html>

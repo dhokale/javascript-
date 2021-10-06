@@ -1,0 +1,5 @@
+1. Create a form to send email.
+2. Fields it should have: To, Subject, Attachment, Message, Send button
+4. Attachment field should be file upload field (<input type="file").
+5. Attachment field should also have additional "Add More Attachments" button. On click of this button, you should see another file upload field.
+6. On click of Send button, get the form to disappear and then show subject as h2, all the details like To, Date/time and message should be presented after this heading.
