@@ -19,13 +19,13 @@
 <input type="submit" value="submit">
 </form>
 <h2>login hear </h2>
-<form name="my form" onsubmit="radio.log()">
+<form name="my form" onsubmit="radio.log">
     <label for="user name"> user name</label>
 <input autocomplete="UserName" id="user name">
    <br><br><br>
-    <label for="password">password</label><br><br><br>
+    <label for="password">password</label><br>
     <input type="password"id="password">
-    <br><br><br>
+    <br>
 <input type="submit" value="submit">
    
  </form>
@@ -129,11 +129,11 @@ var radio = (function()
 function login(){
     var a =document.getElementById("user name").value
 var b = document.getElementById("password").value 
-if(a==""|| b=="")
+if(a=="" || b=="")
     {
 alert("user name or password is empty ")   
 return false;
-} 
+}   
 else
 {
     
