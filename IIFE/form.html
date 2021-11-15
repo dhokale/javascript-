@@ -1,37 +1,25 @@
-<!DOCTYPE html>
-<html> 
-<head>
+<html>
 
-</head>
 <body>
-    <h1> Fill the following Registration Form</h1>
-<form name="my form" onsubmit="register.val()">
+<form name="my form" onsubmit="  register.val()">
 <label for="user"> userName:* </label><br>
-    <input type="text   " value="" id="user" autocomplete="on"name="username"> <span id="username"></span><br>
+<input type="text" value="" id="user" autocomplete="on" name="username"> <span id="user name"></span><br>
 <label for="pass"> Password :* </label><br>
 <input type="password" value="" id="pass" autocomplete="on" name="passwords"> <span id ="password"> </span><br>
- <label for="compass"> cunfurm  Password :* </label><br>
- <input type="password" value="" id="compass" autocomplete="on" name="conpass"> <span id ="comfirmpass"> </span><br>
+<label for="compass"> cunfurm  Password :* </label><br>
+<input type="password" value="" id="compass" autocomplete="on" name="conpass"> <span id ="comfirmpass"> </span><br>
 <label for="mobnum"> Mobile number :* </label><br>
 <input type="text" value="" id="mobnum" autocomplete="on" name="mobnum"> <span id ="mob"> </span><br>
 <label for="emailid"> Email  :* </label><br>
 <input type="text" value="" id="emailid" autocomplete="on" name="eid"> <span id ="email" > </span><br>
 <input type="submit" value="submit">
 </form>
-<h2>login hear </h2>
-<form name="my form" onsubmit="login.log()">
-    <label for="user name"> user name</label><br>
-<input type="text   " value="" id="user name" autocomplete="on"name="username"> 
-    <label for="password">password</label><br>
-    <input type="password" value="" id="password" autocomplete="on" name="passwords"> 
-    
-<input type="submit" value="submit">
-   
- </form>
-    
+</body>
+
+<body>
 <script>
-var register =( function ()
-{         
+    var register=(function()
+    {   
 function validation()
 {
 var un= document.getElementById("user").value
@@ -76,6 +64,7 @@ document.getElementById("comfirmpass").innerHTML="**Please fill the confirm pass
 return false;
 }
 
+
 else if(ps!=cps)
 {
 document.getElementById("comfirmpass").innerHTML="**password is not matching"
@@ -111,7 +100,7 @@ return false;
 }  
 else if((ei.charAt(ei.length-4)!='.') && (ei.charAt(ei.length-3)!='.'))
 {
-document.getElementById("email").innerHTML="** . is invalid position "
+document.getElementById("email").innerHTML="** . is invalid position"
 return false;
 }
 else{
@@ -120,25 +109,40 @@ return true;
 }
 }
 return{
-    val: validation
-};
-})();
-var login= ( function()
-{
-function login(){
-    var a =document.getElementById("user name").value
-var b = document.getElementById("password").value 
-return true;
-
-    
-
-}   
-
-return {
-log: login
-};
-})();
-
+    val: validation()
+}; 
+    })();
 </script>
 </body>
+<body>
+    <h1> login heair </h1>
+    <form name="my form" onsubmit=" login.log()">
+        <label for="userr"> userName:* </label><br>
+        <input type="text" value="" id="userr" autocomplete="on" name="username"> <span id="User name"></span><br>
+        <label for="passs"> Password :* </label><br>
+        <input type="password" value="" id="passs" autocomplete="on" name="passwords"> <span id ="password"> </span><br>   
+<button type="submit" onclick="register.val+login.log"> submit </button>       
+    </form>    
+</body>
+<body>
+    <script>
+        var login=(function(){
+        function login(){
+            var a=document.getElementById("userr").value
+var b =document.getElementById("passs").value
+if(a===""|| b===""){
+document.getElementById("User name").innerHTML="user name / password is empty "
+return false;
+}       
+else{
+    return true;
+}
+}
+return{
+    log: login()
+};
+        })();
+    </script>
+</body>
 </html>
+
