@@ -1,7 +1,7 @@
+<!DOCTYPE html>
 <html>
-
 <body>
-<form name="my form" onsubmit="  register.val()">
+<form name="my form" onsubmit="return  register.val">
 <label for="user"> userName:* </label><br>
 <input type="text" value="" id="user" autocomplete="on" name="username"> <span id="user name"></span><br>
 <label for="pass"> Password :* </label><br>
@@ -14,12 +14,19 @@
 <input type="text" value="" id="emailid" autocomplete="on" name="eid"> <span id ="email" > </span><br>
 <input type="submit" value="submit">
 </form>
-</body>
+<h1> login heair </h1>
+    <form name="my form" onsubmit="return  login.log">
+        <label for="userr"> userName:* </label><br>
+        <input type="text" value="" id="userr" autocomplete="on" name="username"> <span id="User name"></span><br>
+        <label for="passs"> Password :* </label><br>
+        <input type="password" value="" id="passs" autocomplete="on" name="passwords"> <span id ="password"> </span><br>   
+        <input type="submit" value="submit">
+</form>
 
-<body>
 <script>
     var register=(function()
     {   
+        
 function validation()
 {
 var un= document.getElementById("user").value
@@ -112,21 +119,7 @@ return{
     val: validation()
 }; 
     })();
-</script>
-</body>
-<body>
-    <h1> login heair </h1>
-    <form name="my form" onsubmit=" login.log()">
-        <label for="userr"> userName:* </label><br>
-        <input type="text" value="" id="userr" autocomplete="on" name="username"> <span id="User name"></span><br>
-        <label for="passs"> Password :* </label><br>
-        <input type="password" value="" id="passs" autocomplete="on" name="passwords"> <span id ="password"> </span><br>   
-<button type="submit" onclick="register.val+login.log"> submit </button>       
-    </form>    
-</body>
-<body>
-    <script>
-        var login=(function(){
+var login=(function(){
         function login(){
             var a=document.getElementById("userr").value
 var b =document.getElementById("passs").value
@@ -143,6 +136,5 @@ return{
 };
         })();
     </script>
-</body>
+</body> 
 </html>
-
