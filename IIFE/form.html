@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
+<head>
+<title>register form </title>
+</head>
 <body>
-<form name="my form" onsubmit="return  register.val">
+<form name="my form" onsubmit=" return register.val()">
 <label for="user"> userName:* </label><br>
 <input type="text" value="" id="user" autocomplete="on" name="username"> <span id="user name"></span><br>
 <label for="pass"> Password :* </label><br>
@@ -11,11 +14,11 @@
 <label for="mobnum"> Mobile number :* </label><br>
 <input type="text" value="" id="mobnum" autocomplete="on" name="mobnum"> <span id ="mob"> </span><br>
 <label for="emailid"> Email  :* </label><br>
-<input type="text" value="" id="emailid" autocomplete="on" name="eid"> <span id ="email" > </span><br>
+<input type="text" value="" id="emailid" autocomplete="on"name="mail-id"> <span id ="email" > </span><br>
 <input type="submit" value="submit">
 </form>
 <h1> login heair </h1>
-    <form name="my form" onsubmit="return  login.log">
+    <form name="my form" onsubmit="return  login.log()">
         <label for="userr"> userName:* </label><br>
         <input type="text" value="" id="userr" autocomplete="on" name="username"> <span id="User name"></span><br>
         <label for="passs"> Password :* </label><br>
@@ -26,9 +29,9 @@
 <script>
     var register=(function()
     {   
-        
 function validation()
 {
+
 var un= document.getElementById("user").value
 var ps=document.getElementById("pass").value 
 var cps=document.getElementById("compass").value
@@ -94,7 +97,6 @@ else if(mn.length<10)
 document.getElementById("mob").innerHTML="**Please fill the mobile number 10 digit"
 return false;
 }
-
 else if(ei=="")
 {
 document.getElementById("email").innerHTML="**Please fill the email id"
@@ -107,16 +109,17 @@ return false;
 }  
 else if((ei.charAt(ei.length-4)!='.') && (ei.charAt(ei.length-3)!='.'))
 {
-document.getElementById("email").innerHTML="** . is invalid position"
+document.getElementById("email").innerHTML="** . is invalid postion"
 return false;
 }
 else{
 alert("done")
 return true;
 }
-}
+}        
+
 return{
-    val: validation()
+    val: validation,
 }; 
     })();
 var login=(function(){
@@ -132,7 +135,7 @@ else{
 }
 }
 return{
-    log: login()
+    log: login,
 };
         })();
     </script>
