@@ -31,29 +31,12 @@
     {   
 function validation()
 {
-
-var un= document.getElementById("user").value
+    validateUser();
 var ps=document.getElementById("pass").value 
 var cps=document.getElementById("compass").value
 var mn=document.getElementById("mobnum").value 
 var ei=document.getElementById("emailid").value 
- 
-if(un=="")
-{
-document.getElementById("user name").innerHTML="**Please fill the username"
-return false;
-}
-else if((un.length <= 2)|| (un.length > 20))
-{
-document.getElementById("user name").innerHTML="**Please fill the username between 1 to 20 characters only"
-return false;
-}
-else if (!isNaN(un))
-{
-document.getElementById("user name").innerHTML="**Please fill the username only character not a number"
-return false;
-}
-else if(ps=="")
+ if(ps=="")
 {
 document.getElementById("password").innerHTML="**Please fill the password"
 return false;
@@ -116,7 +99,28 @@ else{
 alert("done")
 return true;
 }
-}        
+}  
+function validateUser(){
+    var un= document.getElementById("user").value
+    if(un=="")
+    {
+    document.getElementById("user name").innerHTML="**Please fill the username"
+    return false;
+    }
+    else if((un.length <= 2)|| (un.length > 20))
+    {
+    document.getElementById("user name").innerHTML="**Please fill the username between 1 to 20 characters only"
+    return false;
+    }
+    else if (!isNaN(un))
+    {
+    document.getElementById("user name").innerHTML="**Please fill the username only character not a number"
+    return false;
+    }
+    else{
+        return true;
+    }
+}     
 
 return{
     val: validation,
