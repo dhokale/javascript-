@@ -15,7 +15,7 @@
 <input type="text" value="" id="mobnum" autocomplete="on" name="mobnum"> <span id ="mob"> </span><br>
 <label for="emailid"> Email  :* </label><br>
 <input type="text" value="" id="emailid" autocomplete="on"name="mail-id"> <span id ="email" > </span><br>
-<input type="submit" value="submit">
+<input type="submit" value="submit"> 
 </form>
 <h1> login heair </h1>
     <form name="my form" onsubmit="return  login.log()">
@@ -31,12 +31,13 @@
     {   
 function validation()
 {
-    validateUser();
+    console.log("hello")
+    
 var ps=document.getElementById("pass").value 
 var cps=document.getElementById("compass").value
 var mn=document.getElementById("mobnum").value 
 var ei=document.getElementById("emailid").value 
- if(ps=="")
+   if(ps=="")
 {
 document.getElementById("password").innerHTML="**Please fill the password"
 return false;
@@ -96,10 +97,13 @@ document.getElementById("email").innerHTML="** . is invalid postion"
 return false;
 }
 else{
-alert("done")
-return true;
+    alert("done")
+     validateUser()   
+
 }
-}  
+
+} 
+
 function validateUser(){
     var un= document.getElementById("user").value
     if(un=="")
@@ -116,10 +120,10 @@ function validateUser(){
     {
     document.getElementById("user name").innerHTML="**Please fill the username only character not a number"
     return false;
-    }
-    else{
-        return true;
-    }
+    } 
+else{
+    return true;
+}
 }     
 
 return{
