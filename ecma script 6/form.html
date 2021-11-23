@@ -4,7 +4,7 @@
 <title>register form </title>
 </head>
 <body>
-<form name="my form" onsubmit=" return register.val()">
+<form name="my form" onsubmit=" return validate() ">
 <label for="user"> userName:* </label><br>
 <input type="text" value="" id="user" autocomplete="on" name="username"> <span id="user name"></span><br>
 <label for="pass"> Password :* </label><br>
@@ -25,6 +25,6 @@
         <input type="password" value="" id="passs" autocomplete="on" name="passwords"> <span id ="password"> </span><br>   
         <input type="submit" value="submit">
 </form>
-<script src="IIFE.js"></script>
+<script type="module" src="index.js"></script>
 </body> 
 </html>
