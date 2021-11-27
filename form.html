@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>register form </title>
+</head>
+<body>
+<form name="my form" id="form" onsubmit="return validation()">
+<label for="user"> userName:* </label><br>
+<input type="text" value="" id="user" autocomplete="on" name="username"> <span id="user name"></span><br>
+<label for="pass"> Password :* </label><br>
+<input type="password" value="" id="pass" autocomplete="on" name="passwords"> <span id ="password"> </span><br>
+<label for="compass"> cunfurm  Password :* </label><br>
+<input type="password" value="" id="compass" autocomplete="on" name="conpass"> <span id ="comfirmpass"> </span><br>
+<label for="mobnum"> Mobile number :* </label><br>
+<input type="text" value="" id="mobnum" autocomplete="on" name="mobnum"> <span id ="mob"> </span><br>
+<label for="emailid"> Email  :* </label><br>
+<input type="text" value="" id="emailid" autocomplete="on"name="mail-id"> <span id ="email" > </span><br>
+<input type="submit" value="submit"> 
+</form>
+<h1> login heair </h1>
+    <form name="my form" onsubmit="return login.log()">
+        <label for="userr"> userName:* </label><br>
+        <input type="text" value="" id="userr" autocomplete="on" name="username"> <span id="User name"></span><br>
+        <label for="passs"> Password :* </label><br>
+        <input type="password" value="" id="passs" autocomplete="on" name="passwords"> <span id ="password"> </span><br>   
+        <input type="submit" value="submit">
+</form>
+<script type="module">
+    
+import{ validation} from '/ecma script 6/register.js';
+import{login} from '/ecma script 6/login.js';
+
+</script>
+</body> 
+</html>
