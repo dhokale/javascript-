@@ -1,4 +1,5 @@
-function login(){
+var login=(function(){
+        function login(){
             var a=document.getElementById("userr").value
 var b =document.getElementById("passs").value
 if(a===""|| b===""){
@@ -8,5 +9,10 @@ return false;
 else{
     return true;
 }
-} 
-  export function login(){};  
+}
+return{
+    log: login,
+};
+        })();
+    
+export{login}

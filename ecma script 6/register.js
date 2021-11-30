@@ -1,8 +1,7 @@
 
-function validation()
+ function validation()
 {
-   
-var un= document.getElementById("user").value    
+    var un= document.getElementById("user").value   
 var ps=document.getElementById("pass").value 
 var cps=document.getElementById("compass").value
 var mn=document.getElementById("mobnum").value 
@@ -21,8 +20,8 @@ if(un=="")
     {
     document.getElementById("user name").innerHTML="**Please fill the username only character not a number"
     return false;
-    }
-  else  if(ps=="")
+    } 
+   else if(ps=="")
 {
 document.getElementById("password").innerHTML="**Please fill the password"
 return false;
@@ -42,11 +41,14 @@ else if(cps=="")
 document.getElementById("comfirmpass").innerHTML="**Please fill the confirm password"
 return false;
 }
+
+
 else if(ps!=cps)
 {
 document.getElementById("comfirmpass").innerHTML="**password is not matching"
 return false;
 }
+
 else if(mn=="")
 {
 document.getElementById("mob").innerHTML="**Please fill the mobile number"
@@ -56,6 +58,7 @@ else if(isNaN(mn))
 {
 document.getElementById("mob").innerHTML="**Please fill the mobile number should  be in number"
 return false;
+
 }
 else if(mn.length<10)
 {
@@ -78,9 +81,9 @@ document.getElementById("email").innerHTML="** . is invalid postion"
 return false;
 }
 else{
-    return true;   
+return true;    
 alert("done")
 }
-}      
-export function validation(){};   
-        
+} 
+
+ export {validation};
