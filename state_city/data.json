@@ -1,0 +1,8 @@
+{
+  "state" :["maharashtra","karala","UP","MP","asam"],
+    "maharashtra":["pune","mumbai","satara","raygade","nashike","nakpur", "nandurbar","dhuale"],
+   "karala":["ernakolame" ,"kochi","kallam","alpujara"],
+ "UP":["lakhnow","agraa","elhabad","sangem nager"],
+"MP":["bopal","patna","shiv puri"],
+"asam" :["dispure","gohati","johar"]       
+}
