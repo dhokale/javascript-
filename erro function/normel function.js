@@ -5,7 +5,7 @@ function normel() {
             this.email=email;
         }
     }  
-    let user1=newUser(document.getElementById("fname"), document.getElementById("email"));
-document.createElement("th").textContent=user1.firstName;
-document.createElement("th").textContent=user1.email;
+    var user1=newUser(document.getElementById("fname").value, document.getElementById("email").value);
+console.log("hello");
+alert(user1.firstName+"and "+user1.email);
 }
