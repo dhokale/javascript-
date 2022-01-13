@@ -8,7 +8,7 @@
 	<form>
 		<div>
 		<label for="fname">First Name:</label>
-		<input class="necessary" autocomplete="given-name" type="text" id="fname">
+		<input  autocomplete="given-name" type="text" id="fname">
 		</div>
 		
 		<div>
@@ -17,7 +17,7 @@
 		</div>
 		
 		<div>
-		 <button onclick="normel();">submit</button>
+		 <button onclick="new User(document.getElementById('fname').value, document.getElementById('email').value)">submit</button>
 		 </div> 	
 	</form>
 	<script src="normel function.js"></script>
