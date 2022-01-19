@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+table, td {
+  border: 1px solid black;
+}
+</style>
 	<title>normel function</title>
 	</head>
 <body>
@@ -18,16 +23,21 @@
 		
 		<div>
 		 <button onclick="new User(document.getElementById('fname').value, document.getElementById('email').value).newRegister();">submit</button>
-		 </div> 	
-	</form>
-	<table id="table">
-		<caption> infermation about the user </caption>
+		 </div>
+<br>
+<br>
+<table id="myTable">	
+	<caption> infermation about the user </caption>
 	<tr>
 		<th> firstName </th>
-		<th colspan="2" > Email</th>
+		<th> Email</th>
 	</tr>
-	</table>
 
+</table>
+
+ 	
+	</form>
+	
 	<script src="normel function.js"></script>
 </body>
 </html>

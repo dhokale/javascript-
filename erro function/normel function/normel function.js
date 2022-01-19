@@ -1,4 +1,3 @@
-
 class User{
         constructor( fname, email){
             this.fname= fname;
@@ -6,16 +5,14 @@ class User{
         }
    newRegister()
    {
-let tr=document.createElement("tr");
-tr.setAttribute("id","myTr");
-document.getElementById("table").appendChild(tr);
+      let tr=document.createElement("tr");
 let td=document.createElement("td");
-let  t =document.createTextNode(this.fname);
-td.appendChild(t);
-document.getElementById("myTr").appendChild(td);
+td.innerHTML= this.fname;
 let td1=document.createElement("td");
-let t1 = document.createTextNode(this.email);
-td1.appendChild(t1);
-document.getElementById("myTr").appendChild(td1);
-   } 
+td1.innerHTML =this.email   ;
+tr.appendChild(td);
+tr.appendChild(td1);
+ var table=document.getElementById("myTable");
+table.appendChild(tr);
+       } 
 }
