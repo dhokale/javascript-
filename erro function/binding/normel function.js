@@ -1,13 +1,19 @@
-function normel(){
-    class User{
-        constructor( firstName, email){
-            this.firstName=firstName;
-            this.email=email;
+class User{
+        constructor( fname, email){
+            this.fname= fname;
+            this.email= email;
         }
-    }
-var a=document.getElementById("fname").value;
-var b= document.getElementById("email").value;  
-    var user1 = new User(a,b);
-    var printObj= firstName.bind(user1);
-    alert(+printObj());
-} 
+   newRegister()
+   {
+      let tr=document.createElement("tr");
+let td=document.createElement("td");
+td.innerHTML= this.fname;
+let td1=document.createElement("td");
+td1.innerHTML =this.email   ;
+tr.appendChild(td);
+tr.appendChild(td1);
+ var table=document.getElementById("myTable");
+table.appendChild(tr);
+       } 
+       var register=newRegister.bind(this.email,this.fname); 
+}
