@@ -22,8 +22,10 @@ table, td {
 		</div>
 		
 		<div>
-		 <button onclick="new User(document.getElementById('fname').value, document.getElementById('email').value).newRegister();">submit</button>
+		 <button onclick=" event.preventDefault(); new User(document.getElementById('fname').value, document.getElementById('email').value).newRegister();">submit</button>
 		 </div>
+	</form>
+	
 <br>
 <br>
 <table id="myTable">	
@@ -32,12 +34,10 @@ table, td {
 		<th> firstName </th>
 		<th> Email</th>
 	</tr>
-
 </table>
 
  	
-	</form>
-	
+
 	<script src="normel function.js"></script>
 </body>
 </html>

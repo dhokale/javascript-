@@ -1,13 +1,19 @@
-var normel;
-normel=()=>{
-    class User{
-        constructor( firstName, email){
-            this.firstName=firstName;
-            this.email=email;
+class User{
+    
+        constructor( fname, email){
+            this.fname= fname;
+            this.email= email;
+            var newRegister;     
         }
-    }
-var a=document.getElementById("fname").value;
-var b= document.getElementById("email").value;  
-    var user1 = new User(a,b);
-    document.write("welcom!"+user1.firstName+"  email is  "+user1.email)
-} 
+   newRegister=()=>{
+    let tr=document.createElement("tr");
+let td=document.createElement("td");
+td.innerHTML= this.fname;
+let td1=document.createElement("td");
+td1.innerHTML =this.email   ;
+tr.appendChild(td);
+tr.appendChild(td1);
+ var table=document.getElementById("myTable");
+table.appendChild(tr);
+       } 
+}

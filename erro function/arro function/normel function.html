@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+table, td {
+  border: 1px solid black;
+}
+</style>
 	<title>normel function</title>
 	</head>
 <body>
@@ -8,7 +13,7 @@
 	<form>
 		<div>
 		<label for="fname">First Name:</label>
-		<input class="necessary" autocomplete="given-name" type="text" id="fname">
+		<input  autocomplete="given-name" type="text" id="fname">
 		</div>
 		
 		<div>
@@ -17,9 +22,22 @@
 		</div>
 		
 		<div>
-		 <button onclick="normel();">submit</button>
-		 </div> 	
+		 <button onclick=" event.preventDefault(); new User(document.getElementById('fname').value, document.getElementById('email').value).newRegister();">submit</button>
+		 </div>
 	</form>
+	
+<br>
+<br>
+<table id="myTable">	
+	<caption> infermation about the user </caption>
+	<tr>
+		<th> firstName </th>
+		<th> Email</th>
+	</tr>
+</table>
+
+ 	
+
 	<script src="normel function.js"></script>
 </body>
 </html>
