@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>register form </title>
+</head>
+<body>
+<form name="my form">
+<label for="user"> userName:* </label><br>
+<input type="text" value="" id="user" autocomplete="on" name="username"> <br>
+<label for="pass"> Password :* </label><br>
+<input type="password" value="" id="pass" autocomplete="on" name="passwords"> <br> 
+</form>
+<button onclick="validate()"> submit</button>
+<script>
+    function validate(){
+    var user=document.getElementById("user").value;
+    var pas=document.getElementById("pass").value;
+    var  promise=new Promise(function(myResolve, myReject ){
+        let req = new XMLHttpRequest();
+        req.open('GET', "login.json");
+        req.responseType="json";
+     req.send();
+     req.onload=function(){
+         const text=req.response;
+   val(text);
+        }
+    });
+     function val(obj){
+         const jsonUser=obj["username"];
+const jsonPassword=obj["password"];
+if(user==jsonUser||pas==jsonPassword){
+    var request=new XMLHttpRequest();
+    request.open('get',"welcom.html");
+    request.onload=function(){
+        if (request.status == 200) {
+            myResolve(request.response)
+               } 
+        } 
+        request.send(); 
+}
+
+else{
+    let request1=new XMLHttpRequest();
+    request1.open('get',"error.html");
+    request1.onload=function(){
+       if (request1.status == 200){
+           myReject("file not found ");
+       }    
+    }
+request1.send();
+}  
+}
+       promise.then(
+        function(value) {myDisplayer(value);},
+       )
+promise.catch(
+    function(error) {myDisplayer(error);}
+)
+}
+</script>
+</body>
+</html>
