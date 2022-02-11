@@ -15,46 +15,51 @@
     function validate(){
     var user=document.getElementById("user").value;
     var pas=document.getElementById("pass").value;
-    var  promise=new Promise(function(myResolve, myReject ){
+    var promise=new Promise(function(myResolve, myReject ){
         let req = new XMLHttpRequest();
         req.open('GET', "login.json");
         req.responseType="json";
      req.send();
      req.onload=function(){
          const text=req.response;
-   val(text);
+         function val(text){
+            const jsonUser=text["username"];
+   const jsonPassword=text["password"];
+   if(user==jsonUser||pas==jsonPassword){
+       myResolve();
+   }
+   
+   else{
+       myReject();
+   }       
         }
-    });
-     function val(obj){
-         const jsonUser=obj["username"];
-const jsonPassword=obj["password"];
-if(user==jsonUser||pas==jsonPassword){
-    var request=new XMLHttpRequest();
+    }
+});
+     
+
+       promise.then(
+    function(){
+        var request=new XMLHttpRequest();
     request.open('get',"welcom.html");
+    request.responseType="html";
+    request.send(); 
     request.onload=function(){
         if (request.status == 200) {
-            myResolve(request.response)
+            request.response();
                } 
         } 
-        request.send(); 
-}
-
-else{
-    let request1=new XMLHttpRequest();
-    request1.open('get',"error.html");
-    request1.onload=function(){
-       if (request1.status == 200){
-           myReject("file not found ");
-       }    
-    }
-request1.send();
-}  
-}
-       promise.then(
-        function(value) {myDisplayer(value);},
-       )
-promise.catch(
-    function(error) {myDisplayer(error);}
+    },
+    function(){
+        let request1=new XMLHttpRequest();
+        request1.open('get',"error.html");
+      request1.responseType="html";
+      request1.send();
+        request1.onload=function(){
+           if (request1.status == 200){
+               request1.response();
+           }    
+        }
+    }     
 )
 }
 </script>
